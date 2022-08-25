@@ -1,0 +1,143 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body > img {
+  width: 100vw;
+  height: 90vh;
+  position: relative;
+  top: 125px;
+  opacity: 0.1;
+}
+body .container {
+  opacity: 1;
+  background-color: #e9e9e9;
+  border-radius: 10px;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: auto;
+  margin-top: 30px;
+  -webkit-border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  overflow: hidden;
+  width: calc(100vw - 64vw);
+  /* it means whatever the width of screen we need 35% width of viewport */
+  max-width: 100%;
+  /* border: 1px solid red; */
+}
+.container p {
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.container p a {
+  text-decoration: none;
+}
+#submit {
+  cursor: pointer;
+}
+.header {
+  background-color: #029bbd;
+  padding: 30px 0;
+
+  /* border: 1px solid red; */
+}
+.header h2 {
+  color: white;
+  font-family: sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.form {
+  padding: 40px;
+}
+.form-control {
+  margin-bottom: 30px;
+  position: relative;
+}
+.form-control label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+.form-control input {
+  width: 100%;
+  border: 2px solid #f0f0f0;
+  border-radius: 5px;
+  display: block;
+  font-family: sans-serif;
+  font-size: 14px;
+  padding: 12px;
+}
+.form-control input:focus {
+  outline: 0;
+  border-color: #777;
+}
+/* success and error class will be added by javascript */
+.form-control.success input {
+  border-color: #2ecc71;
+}
+.form-control.error input {
+  border-color: #e74c3c;
+}
+
+.form-control i {
+  position: absolute;
+  /* relative to form control */
+  right: 12px;
+  top: 38px;
+  visibility: hidden;
+}
+.form-control small {
+  visibility: hidden;
+}
+.form-control.success i.fa-circle-check {
+  color: #2ecc71;
+  visibility: visible;
+}
+.form-control.error i.fa-circle-exclamation {
+  color: #e74c3c;
+  visibility: visible;
+}
+.form-control small {
+  position: absolute;
+  left: 0;
+
+  visibility: hidden;
+}
+.form-control.error small {
+  visibility: visible;
+}
+
+.form .btn {
+  background-color: #029bbd;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  color: white;
+  display: block;
+  font-family: sans-serif;
+  font-size: 16px;
+  padding: 15px 0;
+  margin-top: 20px;
+  width: 100%;
+  font-weight: bold;
+  text-transform: uppercase;
+  transform: all 1s ease-in;
+  /* border: 1px solid red; */
+}
+
+.form .btn:hover {
+  background-color: #015062;
+}
+
+@media (max-width: 998px) {
+  .container {
+    width: calc(100vw - 35vw);
+    max-width: 100%;
+  }
+}
